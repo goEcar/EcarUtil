@@ -358,7 +358,77 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/AssetsCopyToSd.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/Base64.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/Base64Util.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/DataFormatUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/DateDeserializer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/DateUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/DensityUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/Des3.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/FileCache.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/FileUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/FileUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/ImageLoaderPark.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/ImageUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/KeyBoardUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/MD5Util.java">
           <value>
             <set />
           </value>
@@ -369,6 +439,56 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/MathsUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/NetUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/NetworkUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/PhotoUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/SignUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/SpUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/StringUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/StringsUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/TimeUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/Util.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/VerifyUtil.java">
           <value>
             <set />
           </value>
@@ -408,6 +528,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/model/ModelImpl/MainActModelImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/model/ModelImpl/SearchModelImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/model/ModelImpl/parkModelImpl.java">
           <value>
             <set />
@@ -418,12 +548,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/ui/activity/NearChangeActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/ui/activity/OfflineMapActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/ui/activity/PathMapActivity.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/ui/activity/SearchAcitivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/ui/activity/WhichGuideActivity.java">
           <value>
             <set />
           </value>
@@ -444,6 +589,21 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/ui/fragment/ParkFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/ui/view/DialogUpdate.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/utils/JsonUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../parkBees-andriod-studio/src/com/chmtech/parkbees/network/DataCenter.java">
           <value>
             <set />
           </value>

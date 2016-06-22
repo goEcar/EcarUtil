@@ -1,5 +1,9 @@
 package urils.ecaray.com.ecarutils.Utils;
 
+/**
+ * 类描述：Base64加密
+ *<p>
+ */
 public final class Base64Util {
 
 	private static final int BASELENGTH = 128;

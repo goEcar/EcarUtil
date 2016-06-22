@@ -7,35 +7,11 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * ===============================================
- * <p/>
- * 项目名称: ParkBeens
- * <p/>
- * 包: com.chmtech.parkbeens.utils
- * <p/>
- * 类名称: SpUtil
  * <p/>
  * 类描述: 共享文件操作工具类
  * <p/>
- * 创建人:
- * <p/>
- * 创建时间: 2015-4-9 下午5:15:23
- * <p/>
- * 修改人:
- * <p/>
- * 修改时间: 2015-4-9 下午5:15:23
- * <p/>
- * 修改备注:
- * <p/>
- * 版本:
- * <p/>
- * ===============================================
  */
 public class SpUtil {
     private SharedPreferences sp;
@@ -58,20 +34,31 @@ public class SpUtil {
         editor = sp.edit();
     }
 
-    // 保存值
+
+    /**
+     * 方法描述：  保存值
+     *<p>
+     * @param
+     * @return
+     */
     public void save(String key, Object value) {
         if (value instanceof Integer) {
-            editor.putInt(key, (Integer) value).commit();
+            editor.putInt(key, (Integer) value).apply();
         } else if (value instanceof String) {
-            editor.putString(key, value == null ? "" : (String) value).commit();
+            editor.putString(key, value == null ? "" : (String) value).apply();
         } else if (value instanceof Boolean) {
-            editor.putBoolean(key, (Boolean) value).commit();
+            editor.putBoolean(key, (Boolean) value).apply();
         } else if (value instanceof Long) {
-            editor.putLong(key, (Long) value).commit();
+            editor.putLong(key, (Long) value).apply();
         }
     }
 
-    // 获取值 参数：cla:获取数据的类型
+    /**
+     * 方法描述：/ 获取值 参数：cla:获取数据的类型
+     *<p>
+     * @param
+     * @return
+     */
     public Object getData(String key, Class cla, Object obj) {
         String strContent;
         int intContent;
@@ -94,7 +81,13 @@ public class SpUtil {
         }
     }
 
-    // 获取ApiKey
+
+    /**
+     * 方法描述：  // 获取ApiKey
+     *<p>
+     * @param
+     * @return
+     */
     public static String getMetaValue(Context context, String metaKey) {
         Bundle metaData = null;
         String apiKey = null;
@@ -117,63 +110,6 @@ public class SpUtil {
         return apiKey;
     }
 
-    // 用share preference来实现是否绑定的开关。在ionBind且成功时设置true，unBind且成功时设置false
-    public static boolean hasBind(Context context) {
-        SharedPreferences sp = PreferenceManager
-                .getDefaultSharedPreferences(context);
-        String flag = sp.getString("bind_flag", "");
-        if ("ok".equalsIgnoreCase(flag)) {
-            return true;
-        }
-        return false;
-    }
 
-    public static void setBind(boolean flag, Context context) {
-        String flagStr = "not";
-        if (flag)
-            flagStr = "ok";
-        SharedPreferences sp = PreferenceManager
-                .getDefaultSharedPreferences(context);
-        Editor editor = sp.edit();
-        editor.putString("bind_flag", flagStr);
-        editor.commit();
-    }
-
-    public static List<String> getTagsList(String originalText) {
-        if (originalText == null || originalText.equals("")) {
-            return null;
-        }
-        List<String> tags = new ArrayList<String>();
-        int indexOfComma = originalText.indexOf(',');
-        String tag;
-        while (indexOfComma != -1) {
-            tag = originalText.substring(0, indexOfComma);
-            tags.add(tag);
-
-            originalText = originalText.substring(indexOfComma + 1);
-            indexOfComma = originalText.indexOf(',');
-        }
-
-        tags.add(originalText);
-        return tags;
-    }
-
-    public static String getLogText(Context context) {
-        SharedPreferences sp = PreferenceManager
-                .getDefaultSharedPreferences(context);
-        return sp.getString("log_text", "");
-    }
-
-    /**
-     * @param context
-     * @param text
-     */
-    public static void setLogText(Context context, String text) {
-        SharedPreferences sp = PreferenceManager
-                .getDefaultSharedPreferences(context);
-        Editor editor = sp.edit();
-        editor.putString("log_text", text);
-        editor.commit();
-    }
 
 }

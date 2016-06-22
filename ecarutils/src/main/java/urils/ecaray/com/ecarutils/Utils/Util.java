@@ -37,6 +37,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
+/**
+ * 类描述：日常工具类
+ *<p>
+ */
 public class Util {
 
     private static final String TAG = "SDK_Sample.Util";
@@ -47,7 +51,7 @@ public class Util {
     /*
      * Convert byte[] to hex
      * string.这里我们可以将byte转换成int，然后利用Integer.toHexString(int)来转换成16进制字符串。
-     *
+     *      <P>
      * @param src byte[] data
      *
      * @return hex string
@@ -70,7 +74,7 @@ public class Util {
 
     /**
      * Convert hex string to byte[]
-     *
+     *          <P>
      * @param hexString the hex string
      * @return byte[]
      */
@@ -91,7 +95,7 @@ public class Util {
 
     /**
      * Convert char to byte
-     *
+     *          <P>
      * @param c char
      * @return byte
      */
@@ -102,10 +106,14 @@ public class Util {
     /*
      * 16进制数字字符集
      */
+
     private static String hexString = "0123456789ABCDEF";
 
-    /*
-     * 将字符串编码成16进制数字,适用于所有字符（包括中文）
+    /**
+     * 方法描述：将字符串编码成16进制数字,适用于所有字符（包括中文）
+     *<p>
+     * @param
+     * @return
      */
     public static String toHexString(String str) {
         // 根据默认编码获取字节数组
@@ -119,7 +127,13 @@ public class Util {
         return sb.toString();
     }
 
-    // 转换十六进制编码为字符串
+
+    /**
+     * 方法描述：// 转换十六进制编码为字符串
+     *<p>
+     * @param
+     * @return
+     */
     public static String hexToString(String s) {
         if ("0x".equals(s.substring(0, 2))) {
             s = s.substring(2);
@@ -558,7 +572,13 @@ public class Util {
         listView.setLayoutParams(params);
     }
 
-    //判断手机是否是双卡
+
+    /**
+     * 方法描述： //判断手机是否是双卡
+     *<p>
+     * @param
+     * @return
+     */
     public static boolean isDoubleTelephone(Context context) {
         boolean isDouble = true;
         Method method = null;
@@ -600,6 +620,7 @@ public class Util {
     /**
      * @throws Exception
      * @功能：隐藏键盘
+     * <P>
      * @param：
      * @return：
      */
@@ -612,6 +633,7 @@ public class Util {
     /**
      * @throws Exception
      * @功能：调出键盘
+     * <P>
      * @param：
      * @return：
      */
@@ -620,7 +642,13 @@ public class Util {
         imm.showSoftInput(eText, InputMethodManager.SHOW_FORCED); // 隐藏键盘
     }
 
-    //获取内存信息
+
+    /**
+     * 方法描述：  //获取内存信息
+     *<p>
+     * @param
+     * @return
+     */
     public static void getMemInfo(Context context){
         //获得MemoryInfo对象
         ActivityManager.MemoryInfo memoryInfo = new ActivityManager.MemoryInfo();
@@ -629,5 +657,6 @@ public class Util {
         //字符类型转换
         String leftMemSize = Formatter.formatFileSize(context, memSize);
     }
+
 
 }

@@ -16,6 +16,10 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+/**
+ * 类描述：图片操作工具类
+ *<p>
+ */
 public class ImageUtils {
     public static boolean m_bCapture = false; // using test
     public static int cameraWidth;

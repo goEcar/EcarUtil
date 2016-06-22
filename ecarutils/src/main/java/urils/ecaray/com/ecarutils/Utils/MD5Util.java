@@ -1,7 +1,10 @@
 package urils.ecaray.com.ecarutils.Utils;
 
 import java.security.MessageDigest;
-
+/**
+ * 类描述：MD5加密工具类
+ *<p>
+ */
 public class MD5Util {
 
     private static String byteArrayToHexString(byte b[]) {

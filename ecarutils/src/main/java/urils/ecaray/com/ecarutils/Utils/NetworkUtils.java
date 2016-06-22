@@ -8,6 +8,10 @@ import android.telephony.TelephonyManager;
 
 import java.util.List;
 
+/**
+ * 类描述：网络操作工具类
+ *<p>
+ */
 public class NetworkUtils {
 	/**
 	 * 网络是否可用
@@ -102,5 +106,6 @@ public class NetworkUtils {
 		}
 		return false;
 	}
+
 
 }

@@ -27,3 +27,11 @@ dependencies {
     compile files('libs/BaiduLBS_Android.jar')
     compile 'com.android.support:appcompat-v7:24.0.0'
 }
+
+task makeJar(type: Copy) {
+    delete 'build/libs/mysdk.jar'
+    from('build/intermediates/bundles/release/')
+    into('build/libs/')
+    include('classes.jar')
+    rename ('classes.jar', 'mysdk.jar')
+}

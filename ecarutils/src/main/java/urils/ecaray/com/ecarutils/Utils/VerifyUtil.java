@@ -10,15 +10,14 @@ import java.util.regex.Pattern;
 
 /**
  * @description 字符校验工具类
- * @author Jeck.Liu
- * @date 2015-10-21
+ * <P/>
  */
     public class VerifyUtil {
 	final static String PLEASE_SELECT = "请选择...";
 
 	/**
 	 * 判断字符串的长度
-	 * 
+	 *  <P>
 	 * @param str
 	 */
 	public static boolean isCheckLength(String str, int start, int end) {
@@ -28,7 +27,7 @@ import java.util.regex.Pattern;
 
 	/**
 	 * 验证密码格式, 只支持英文和数字.
-	 * 
+	 *    <P>
 	 * @param pwd
 	 * @return
 	 */
@@ -38,7 +37,7 @@ import java.util.regex.Pattern;
 
 	/**
 	 * 验证密码格式, 必须是字母和数字的组合
-	 * 
+	 *   <P>
 	 * @param pwd
 	 * @return
 	 */
@@ -48,7 +47,7 @@ import java.util.regex.Pattern;
 
 	/**
 	 * 验证密码是否包含字母、数字或特殊字符中的两种或以上;
-	 * 
+	 *   <P>
 	 * @param pwd
 	 * @return
 	 */
@@ -68,7 +67,10 @@ import java.util.regex.Pattern;
 	}
 
 	/**
-	 * 验证手机号是否正确
+	 * 方法描述：验证手机号是否正确
+	 *<p>
+	 * @param
+	 * @return
 	 */
 	public static boolean isMobileNO(String telephone) {
 		if (TextUtils.isEmpty(telephone))
@@ -80,8 +82,8 @@ import java.util.regex.Pattern;
 
 	/**
 	 * 验证短信验证码长度;
-	 * 
-	 * @param mobiles
+	 *      <P>
+	 * @param 验证码
 	 * @return
 	 */
 	public static boolean isSmsCode(String msgCode) {

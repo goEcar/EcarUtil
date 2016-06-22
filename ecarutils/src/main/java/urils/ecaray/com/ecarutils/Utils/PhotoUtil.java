@@ -26,6 +26,10 @@ import java.io.IOException;
 import java.lang.ref.SoftReference;
 import java.util.HashMap;
 
+/**
+ * 类描述：图片操作工具类
+ *<p>
+ */
 public class PhotoUtil {
     /**
      * 图片保存路径
@@ -35,7 +39,7 @@ public class PhotoUtil {
 
     /**
      * 将图片变为圆角
-     *
+     *      <P>
      * @param bitmap 原Bitmap图片
      * @param pixels 图片圆角的弧度(单位:像素(px))
      * @return 带有圆角的图片(Bitmap 类型)
@@ -65,7 +69,7 @@ public class PhotoUtil {
 
     /**
      * 获取缩略图图片
-     *
+     *     <P>
      * @param imagePath 图片的路径
      * @param width     图片的宽度
      * @param height    图片的高度
@@ -104,7 +108,7 @@ public class PhotoUtil {
 
     /**
      * LOMO特效
-     *
+     *     <P>
      * @param bitmap 原图片
      * @return LOMO特效图片
      */
@@ -183,7 +187,7 @@ public class PhotoUtil {
 
     /**
      * 旧时光特效
-     *
+     *     <P>
      * @param bmp 原图片
      * @return 旧时光特效图片
      */
@@ -222,7 +226,7 @@ public class PhotoUtil {
 
     /**
      * 暖意特效
-     *
+     *    <P>
      * @param bmp     原图片
      * @param centerX 光源横坐标
      * @param centerY 光源纵坐标
@@ -613,7 +617,14 @@ public class PhotoUtil {
         }
         return degree;
     }
-    /** 保存方法 */
+
+
+    /**
+     * 方法描述：  保存方法
+     *<p>
+     * @param
+     * @return
+     */
    static public String saveBitmap(String patch, String af, Context context) {
        String fileName= DataFormatUtil.addText(new StringBuilder(),patch,af,".jpg");
        File f = new File(fileName);
@@ -657,14 +668,6 @@ public class PhotoUtil {
         }
         return fileName;
     }
-    /**
-     * 手机SD卡图片缓存
-     */
-    public static HashMap<String, SoftReference<Bitmap>> mPhoneAlbumCache = new HashMap<String, SoftReference<Bitmap>>();
-    /**
-     * 手机缩略图图片缓存
-     */
-    public static HashMap<String, SoftReference<Bitmap>> mPhoneThumbnailCache = new HashMap<String, SoftReference<Bitmap>>();
     /**
      * 文件路径
      */

@@ -16,8 +16,18 @@ import java.text.DecimalFormat;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * 类描述：数据格式化
+ *<p>
+ */
 public class DataFormatUtil {
-    // 添加字符串
+
+    /**
+     * 方法描述：   // 添加字符串
+     *<p>
+     * @param
+     * @return
+     */
     public static synchronized String addText(StringBuilder sb, String... texts) {
         sb.delete(0, sb.length());
         for (String str : texts) {
@@ -109,6 +119,12 @@ public class DataFormatUtil {
         return context.getResources().getString(id);
     }
 
+   /**
+    * 方法描述：md5字符串
+    *<p>
+    * @param
+    * @return
+    */
     public static StringBuffer md5(String plainText) {
         StringBuffer buf = null;
         try {
@@ -131,21 +147,38 @@ public class DataFormatUtil {
         return buf;
     }
 
-    // 此方法是字符转转化为16位md5的方法
+    /**
+     * 方法描述：  // 此方法是字符转转化为16位md5的方法
+     *<p>
+     * @param
+     * @return
+     */
+
     public static String to16Md5(String plainText) {
         String md5Str = null;
         md5Str = md5(plainText).toString().substring(8, 24);
         return md5Str;
     }
+/**
+ * 方法描述：   // 此方法是字符转转化为32位md5的方法
+ *<p>
+ * @param
+ * @return
+ */
 
-    // 此方法是字符转转化为32位md5的方法
     public static String to32Md5(String plainText) {
         String md5Str = null;
         md5Str = md5(plainText).toString();
         return md5Str;
     }
 
-    // 设置控件的高 参数:context 上下文 size;屏幕的倍数 view:需要调整的控件 dpValue：屏幕宽度的倍数
+
+    /**
+     * 方法描述：// 设置控件的高 参数:context 上下文 size;屏幕的倍数 view:需要调整的控件 dpValue：屏幕宽度的倍数
+     *<p>
+     * @param
+     * @return
+     */
     public static void setViewsHeightDp(Activity context, double dpValue,
                                         View view) {
         DisplayMetrics metric = new DisplayMetrics();
@@ -156,7 +189,13 @@ public class DataFormatUtil {
         lp.height = (int) (width * dpValue);
     }
 
-    // 设置控件的宽 参数:context 上下文 size;屏幕的倍数 view:需要调整的控件
+    /**
+     * 方法描述：    // 设置控件的宽 参数:context 上下文 size;屏幕的倍数 view:需要调整的控件
+     *<p>
+     * @param
+     * @return
+     */
+
     public static int setViewsWith(Context context, Double size, View view) {
         DisplayMetrics dm = new DisplayMetrics();
         WindowManager wm = (WindowManager) context
@@ -170,13 +209,25 @@ public class DataFormatUtil {
 
     }
 
-    // 设置控件的高 参数:context 上下文 size;屏幕的倍数 view:需要调整的控件
+
+    /**
+     * 方法描述：    // 设置控件的高 参数:context 上下文 size;屏幕的倍数 view:需要调整的控件
+     *<p>
+     * @param
+     * @return
+     */
     public static void setViewsHeightPx(Context context, int pxValue, View view) {
         LayoutParams lp = view.getLayoutParams();
         lp.height = pxValue;
     }
 
-    // 设置控件的宽 参数:context 上下文 size;屏幕的倍数 view:需要调整的控件
+
+    /**
+     * 方法描述：  // 设置控件的宽 参数:context 上下文 size;屏幕的倍数 view:需要调整的控件
+     *<p>
+     * @param
+     * @return
+     */
     public static void setViewsWidthPx(Context context, int pxValue, View view) {
         LayoutParams lp = view.getLayoutParams();
         lp.width = pxValue;
@@ -185,6 +236,7 @@ public class DataFormatUtil {
     /**
      * @throws Exception
      * @功能：对String 进行encoding 操作
+     *  <p>
      * @param：
      * @return：
      */
@@ -229,5 +281,7 @@ public class DataFormatUtil {
         Matcher m = p.matcher(mobiles);
         return m.matches();
     }
+
+
 
 }

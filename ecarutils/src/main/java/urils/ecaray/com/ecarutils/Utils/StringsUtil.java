@@ -1,12 +1,24 @@
 package urils.ecaray.com.ecarutils.Utils;
 
+import android.text.SpannableString;
+import android.text.Spanned;
 import android.text.TextUtils;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
+import android.widget.TextView;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * 类描述：字符串操作工具类
+ *<p>
+ */
 public class StringsUtil {
 	public static String urlParse(String url) {
 		int len1 = url.indexOf("&t=");
@@ -23,7 +35,9 @@ public class StringsUtil {
 		return url;
 	}
 	/**
+	 * <P>
 	 * @功能：对String 进行encoding 操作
+	 *  <P>
 	 * @param：
 	 * @return：
 	 * @throws Exception
@@ -38,7 +52,13 @@ public class StringsUtil {
 		return str;
 	}
 
-	// 将二进制字符串转换为char
+
+	/**
+	 * 方法描述： 	// 将二进制字符串转换为char
+	 *<p>
+	 * @param
+	 * @return
+	 */
 	public static char BinstrToChar(String binStr) {
 		int[] temp = BinstrToIntArray(binStr);
 		int sum = 0;
@@ -48,7 +68,13 @@ public class StringsUtil {
 		return (char) sum;
 	}
 
-	// 将初始二进制字符串转换成字符串数组，以空格相隔
+
+	/**
+	 * 方法描述：// 将初始二进制字符串转换成字符串数组，以空格相隔
+	 *<p>
+	 * @param
+	 * @return
+	 */
 	public static String[] StrToStrArray(String str) {
 		return str.split(" ");
 	}
@@ -64,7 +90,10 @@ public class StringsUtil {
 	}
 
 	/**
-	 * 去除EditText中的空字符
+	 * 方法描述： 去除EditText中的空字符
+	 *<p>
+	 * @param
+	 * @return
 	 */
 	public static String deleterTrim(String edit) {
 //		String Str = "";
@@ -84,7 +113,7 @@ public class StringsUtil {
 	}
 	/**
 	 * 验证身份证是否合法
-	 * 
+	 *       <P>
 	 * @功能：
 	 * @param：身份证
 	 * @return：true 合法
@@ -125,7 +154,7 @@ public class StringsUtil {
 	}
 	/**
 	 * 验证手机号码
-	 * 
+	 *    <P>
 	 * @param mobiles
 	 * @return true手机号正确
 	 */
@@ -143,7 +172,7 @@ public class StringsUtil {
 	}
 	/**
 	 * 验证身份证号码
-	 * 
+	 *      <P>
 	 * @param mobiles
 	 * @return true手机号正确
 	 */
@@ -161,7 +190,7 @@ public class StringsUtil {
 	}
 	/**
 	 * 验证车牌号(除前二位)是否合法
-	 * 
+	 *    <P>
 	 * @功能：
 	 * @param：车牌号
 	 * @return：true 合法
@@ -184,6 +213,7 @@ public class StringsUtil {
 	/**
 	 * @throws Exception
 	 * @功能：是否符合数字格式
+	 *  <P>
 	 * @param：
 	 * @return：
 	 */
@@ -192,6 +222,114 @@ public class StringsUtil {
 				.compile("^([1-9]\\d*\\.?\\d{0,2})|(0\\.\\d{0,2})|([1-9]\\d*)|0$");
 		Matcher m = p.matcher(amount);
 		return m.matches();
+	}
+
+	/**
+	 * 验证邮箱地址是否正确
+	 *       <P>
+	 * @param email
+	 * @return true 邮箱名正确
+	 */
+	public static boolean checkEmail(String email) {
+		boolean flag = false;
+		try {
+			String check = "^([a-z0-9A-Z]+[-|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$";
+			Pattern regex = Pattern.compile(check);
+			Matcher matcher = regex.matcher(email);
+			flag = matcher.matches();
+		} catch (Exception e) {
+			Log.e("tag", "验证邮箱地址错误");
+			flag = false;
+		}
+
+		return flag;
+	}
+
+
+	public static String convertStreamToString(InputStream is) {
+        /*
+         * To convert the InputStream to String we use the
+		 * BufferedReader.readLine() method. We iterate until the BufferedReader
+		 * return null which means there's no more data to read. Each line will
+		 * appended to a StringBuilder and returned as String.
+		 */
+		BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+		StringBuilder sb = new StringBuilder();
+
+		String line = null;
+		try {
+			while ((line = reader.readLine()) != null) {
+				sb.append(line + "\n");
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				is.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+		return sb.toString();
+	}
+
+
+
+
+
+	/**
+	 * 方法描述：// 将字符串转换成二进制字符串，以空格相隔
+	 *<p>
+	 * @param
+	 * @return
+	 */
+	public static String StrToBinstr(String str) {
+		char[] strChar = str.toCharArray();
+		String result = "";
+		for (int i = 0; i < strChar.length; i++) {
+			result += Integer.toBinaryString(strChar[i]) + " ";
+		}
+		return result;
+	}
+
+
+	/**
+	 * 方法描述：// 将二进制字符串转换成Unicode字符串
+	 *<p>
+	 * @param
+	 * @return
+	 */
+	public static String BinstrToStr(String binStr) {
+		String[] tempStr = StrToStrArray(binStr);
+		char[] tempChar = new char[tempStr.length];
+		for (int i = 0; i < tempStr.length; i++) {
+			tempChar[i] = BinstrToChar(tempStr[i]);
+		}
+		return String.valueOf(tempChar);
+	}
+
+
+
+	/**
+	 * @throws Exception
+	 * @功能：高亮显示搜索关键词
+	 * @param：textView:需要设置的textView searchKey:关键词 color:高亮显示的颜色 text:需要设置的句子
+	 * @return：
+	 */
+	public static void setSearchKey(TextView textView, String text,
+									String searchKey, int color) {
+		SpannableString s = new SpannableString(text);
+		Pattern p = Pattern.compile(searchKey);
+		Matcher m = p.matcher(s);
+		while (m.find()) {
+			int start = m.start();
+			int end = m.end();
+			s.setSpan(new ForegroundColorSpan(color), start, end,
+					Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+		}
+		textView.setText(s);
+
 	}
 	
 }

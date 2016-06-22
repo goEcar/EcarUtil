@@ -6,9 +6,8 @@ import android.widget.EditText;
 
 
 /**
- * @description 软键盘管理的工具类
- * @author zhujie
- * @date 2015-11-19	
+ *  软键盘管理的工具类
+ * <P/>
  */
 public class KeyBoardUtils {
 	/** 
