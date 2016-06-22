@@ -46,7 +46,7 @@ public class SignUtils {
      * 拼接字符串：转码
      * 功能：获取请求url  1.拼接url 2.转码
      */
-    public String getUrlEncode(String baseUrl, TreeMap<String, String> tMap, String requestKey) {
+    public static String getUrlEncode(String baseUrl, TreeMap<String, String> tMap, String requestKey) {
         return DataFormatUtil.addText(new StringBuilder(), baseUrl,
                 securityKeyMethodEnc(tMap,requestKey));
     }
@@ -55,7 +55,7 @@ public class SignUtils {
      * 拼接字符串：不转码
      * 功能：获取请求url  1.拼接url 2.转码
      */
-    public String getUrlNoEncode(String baseUrl, TreeMap<String, String> tMap, String requestKey) {
+    public static String getUrlNoEncode(String baseUrl, TreeMap<String, String> tMap, String requestKey) {
         return DataFormatUtil.addText(new StringBuilder(), baseUrl,
                 securityKeyMethodNoEnc(tMap,requestKey));
     }
@@ -66,7 +66,7 @@ public class SignUtils {
      * @param：
      * @return：
      */
-    private String securityKeyMethodEnc(TreeMap<String, String> tMap, String requestKey) {
+    public static String securityKeyMethodEnc(TreeMap<String, String> tMap, String requestKey) {
         return getSecurityKeys(tMap, true,requestKey);
     }
 
@@ -76,7 +76,7 @@ public class SignUtils {
      * @param：
      * @return：
      */
-    private String securityKeyMethodNoEnc(TreeMap<String, String> tMap, String requestKey) {
+    public static String securityKeyMethodNoEnc(TreeMap<String, String> tMap, String requestKey) {
         return getSecurityKeys(tMap, false,requestKey);
     }
 
@@ -86,7 +86,7 @@ public class SignUtils {
      * @param：encode:是否添加encode
      * @return：
      */
-    private String getSecurityKeys(TreeMap<String, String> tMap, boolean encode, String requestKey) {
+    public static String getSecurityKeys(TreeMap<String, String> tMap, boolean encode, String requestKey) {
         Set<String> keys = tMap.keySet();
         Iterator<String> iterator = keys.iterator();
         String parmas = "";
