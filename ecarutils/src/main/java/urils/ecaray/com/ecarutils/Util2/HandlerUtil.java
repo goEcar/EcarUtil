@@ -1,0 +1,55 @@
+package urils.ecaray.com.ecarutils.Util2;
+
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+
+/**
+ * ===============================================
+ * <p/>
+ * 项目名称: ParkBeens
+ * <p/>
+ * 包: com.chmtech.parkbeens.utils
+ * <p/>
+ * 类名称: HandlerUtil
+ * <p/>
+ * 类描述: handler的工具类
+ * <p/>
+ * 创建人: 金征
+ * <p/>
+ * 创建时间: 2015-4-14 下午2:18:13
+ * <p/>
+ * 修改人:
+ * <p/>
+ * 修改时间: 2015-4-14 下午2:18:13
+ * <p/>
+ * 修改备注:
+ * <p/>
+ * 版本:
+ * <p/>
+ * ===============================================
+ */
+public class HandlerUtil {
+    // 发送空的message
+    public static void sendMessage(Handler handler, int what) {
+        Message msg = new Message();
+        msg.what = what;
+        handler.sendEmptyMessage(what);
+    }
+
+    // 发送带obj的message
+    public static void sendMessage(Handler handler, int what, Object obj) {
+        Message msg = new Message();
+        msg.what = what;
+        msg.obj = obj;
+        handler.sendMessage(msg);
+    }
+
+    // 发送带bundle的message
+    public static void sendMessage(Handler handler, int what, Bundle bundle) {
+        Message msg = new Message();
+        msg.what = what;
+        msg.setData(bundle);
+        handler.sendMessage(msg);
+    }
+}

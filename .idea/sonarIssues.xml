@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util1/AppUiUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util1/FileUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util1/JsonUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util1/MathsUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util1/PhotoUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util1/StringUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util1/ToastManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util1/Util.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util1/com/DrivingRouteOverlay.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util2/AppUiUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util2/AppUpdateHelper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util2/FileUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util2/FileUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util2/ImageUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util2/JsonUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util2/PromptManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util2/SpUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util2/StringUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util2/TimeUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util2/Util.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util2/XmlParseUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util3/FileUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util3/JsonUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util3/NetUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util3/PhotoUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util3/PopupWindowHelper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util3/StringUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util3/TagUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util3/Util.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util4/DateUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util4/StringUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util4/Util.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util5/AppUiUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util5/DateDeserializer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util5/EncryptionUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util5/Environments.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util5/FileCache.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util5/FileSizeUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util5/ImageLoader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util5/MyCrashHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util5/StringUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util5/StringsUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util5/UpdateManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util5/UploadUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util6/DateUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util6/FileUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util6/MemoryManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util6/PicSizeUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util6/Util.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util7/AppFunctionUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util7/AppUiUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util7/DateDeserializer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util7/EncryptionUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util7/Environments.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util7/FileCache.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util7/FileSizeUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util7/ImageLoaderPark.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util7/MathsUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util7/StringsUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util7/UpdateManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util7/UploadUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util7/camera/CameraBitmapUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../RoadParking-Android-Studio/Studio_RoadParking-library/src/com/szchmtech/parkingfee/ParkApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../RoadParking-Android-Studio/Studio_RoadParking_TianJin/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/base/AppApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/ui/activity/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/ui/fragment/ParkFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
