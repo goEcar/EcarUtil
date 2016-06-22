@@ -8,12 +8,27 @@
             <set />
           </value>
         </entry>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/fragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/build.gradle">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/build.gradle">
           <value>
             <set />
           </value>
@@ -303,6 +318,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util7/MD5Utils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Util7/MathsUtil.java">
           <value>
             <set />
@@ -328,6 +348,36 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/AnimationUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/AppUiUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/ImageLoaderPark.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/MD5Utils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ecarutils/src/main/java/urils/ecaray/com/ecarutils/Utils/MathsUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Road-PdasNew20160609/local.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../RoadParking-Android-Studio/Studio_RoadParking-library/src/com/szchmtech/parkingfee/ParkApplication.java">
           <value>
             <set />
@@ -338,12 +388,57 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../easycharge_20160420/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easycharge_20160420/settings.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/base/AppApplication.java">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/model/ModelImpl/CurAreaModelImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/model/ModelImpl/parkModelImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/ui/activity/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/ui/activity/PathMapActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/ui/activity/SearchAcitivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/ui/fragment/BarCodeScannerFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/ui/fragment/ChargeFragmentManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../easycharge_20160420/src/com/ecaray/easycharge/ui/fragment/MineFragment.java">
           <value>
             <set />
           </value>
