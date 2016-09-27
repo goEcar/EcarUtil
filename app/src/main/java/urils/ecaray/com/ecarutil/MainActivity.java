@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initLoger();
-
         TagUtil.e("测试");
         ToastUtils.showToastShort("测试");
     }
