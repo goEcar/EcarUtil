@@ -34,7 +34,7 @@ public class ContlorKeyboard {
      */
    public boolean isVisibility; //是否上移
 
-    private void controlKeyboardLayout(final View root, final View scrollToView) {
+    public void controlKeyboardLayout(final View root, final View scrollToView) {
         root.getViewTreeObserver().addOnGlobalLayoutListener( new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
