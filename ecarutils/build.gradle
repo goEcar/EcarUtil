@@ -25,6 +25,7 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.orhanobut:logger:1.3'
+    compile 'com.github.goEcar:RxbusKim:1.0.7'
 }
 
 task makeJar(type: Copy) {
