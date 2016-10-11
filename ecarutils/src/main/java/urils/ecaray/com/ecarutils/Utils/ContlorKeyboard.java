@@ -28,12 +28,11 @@ import android.view.ViewTreeObserver;
  */
 public class ContlorKeyboard {
 
-    /**
-     * @param root 最外层布局，需要调整的布局
-     * @param scrollToView 被键盘遮挡的scrollToView，滚动root,使scrollToView在root可视区域的底部
-     */
-    public boolean isVisibility; //是否上移
     private int AREA_HEIGHT = 100;//遮盖的高度
+
+    public boolean isVisibility; //是否上移
+    public boolean isNeedContlor; //是否需要调整
+
 
 
     public ContlorKeyboard setAREA_HEIGHT(int AREA_HEIGHT) {
@@ -41,7 +40,13 @@ public class ContlorKeyboard {
         return this;
     }
 
-    public void controlKeyboardLayout(final View root, final View scrollToView) {
+    /**
+     * 方法描述：解决系统键盘挡住按钮的问题
+     *<p>
+     * @param  root 当前不觉得最顶层View    scrollToView：需要显示的View(比如button)
+     * @return
+     */
+    public void controlKeyboardLayoutToSys(final View root, final View scrollToView) {
         root.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
@@ -59,13 +64,57 @@ public class ContlorKeyboard {
                         // 计算root滚动高度，使scrollToView在可见区域
                         int srollHeight = (location[1] + scrollToView.getHeight()) - rect.bottom;
                         if (srollHeight >= 0) {
-                            root.scrollTo(0, srollHeight);
+                            root.scrollTo(0, srollHeight+10);
                             isVisibility = true;
                         }
                     }
                 } else {
                     // 键盘隐藏
                     root.scrollTo(0, 0);
+                    isVisibility = false;
+                }
+            }
+        });
+    }
+
+    /**
+     * 方法描述：解决自定义键盘挡住按钮的问题 (只支持1个输入框)
+     *<p>
+     * @param  rootView 当前不觉得最顶层View  keyBoard：自定义键盘的KeyboardView  button：需要显示的View(比如button)
+     * @return
+     */
+    public void controlKeyboardLayoutToCustom(final View rootView,final View keyBoard, final View button) {
+        rootView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                //1.判断是否需要调整
+                int keyBoarrdTop;//键盘的顶部到屏幕顶部距离
+                int buttonBottom;//按钮底部到屏幕顶部的距离
+
+                if(isNeedContlor){//需要调整
+                    keyBoarrdTop= rootView.getHeight()-keyBoard.getHeight();//键盘的y坐标
+                    buttonBottom= button.getBottom();//按钮的y坐标
+                    if(keyBoarrdTop <buttonBottom){  //会盖住按钮
+                        isNeedContlor=true;
+                    } else{
+                        return;
+                    }
+                } else{
+                    return;
+                }
+
+                //2.键盘弹出则调整
+                if (keyBoard.isShown()) {      // 键盘弹出
+                    if (!isVisibility) {
+                        // 计算root滚动高度，使scrollToView在可见区域
+                        int srollHeight = buttonBottom - keyBoarrdTop  ;
+                        if (srollHeight >= 0) {
+                            rootView.scrollTo(0, srollHeight+10);
+                            isVisibility = true;
+                        }
+                    }
+                } else {
+                    rootView.scrollTo(0, 0);
                     isVisibility = false;
                 }
             }
