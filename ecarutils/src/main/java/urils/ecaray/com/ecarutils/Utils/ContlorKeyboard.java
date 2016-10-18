@@ -40,12 +40,15 @@ public class ContlorKeyboard {
         return this;
     }
 
-    /**
-     * 方法描述：解决系统键盘挡住按钮的问题
-     *<p>
-     * @param  root 当前不觉得最顶层View    scrollToView：需要显示的View(比如button)
-     * @return
-     */
+    public void controlKeyboardLayout(final View root, final View scrollToView) {
+        controlKeyboardLayoutToSys(root,scrollToView);
+    }
+        /**
+         * 方法描述：解决系统键盘挡住按钮的问题
+         *<p>
+         * @param  root 当前不觉得最顶层View    scrollToView：需要显示的View(比如button)
+         * @return
+         */
     public void controlKeyboardLayoutToSys(final View root, final View scrollToView) {
         root.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override

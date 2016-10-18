@@ -1,5 +1,13 @@
 package urils.ecaray.com.ecarutils.Utils;
 
+import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
+import android.os.Build;
+import android.text.TextUtils;
+import android.util.Log;
+
 import java.security.KeyFactory;
 import java.security.PrivateKey;
 import java.security.spec.PKCS8EncodedKeySpec;
@@ -9,7 +17,7 @@ import java.util.TreeMap;
 
 /**
  * 类描述：签名工具类
- *<p>
+ * <p>
  */
 public class SignUtils {
 
@@ -48,7 +56,7 @@ public class SignUtils {
      */
     public static String getUrlEncode(String baseUrl, TreeMap<String, String> tMap, String requestKey) {
         return DataFormatUtil.addText(new StringBuilder(), baseUrl,
-                securityKeyMethodEnc(tMap,requestKey));
+                securityKeyMethodEnc(tMap, requestKey));
     }
 
     /**
@@ -57,7 +65,7 @@ public class SignUtils {
      */
     public static String getUrlNoEncode(String baseUrl, TreeMap<String, String> tMap, String requestKey) {
         return DataFormatUtil.addText(new StringBuilder(), baseUrl,
-                securityKeyMethodNoEnc(tMap,requestKey));
+                securityKeyMethodNoEnc(tMap, requestKey));
     }
 
     /**
@@ -67,7 +75,7 @@ public class SignUtils {
      * @return：
      */
     public static String securityKeyMethodEnc(TreeMap<String, String> tMap, String requestKey) {
-        return getSecurityKeys(tMap, true,requestKey);
+        return getSecurityKeys(tMap, true, requestKey);
     }
 
     /**
@@ -77,7 +85,7 @@ public class SignUtils {
      * @return：
      */
     public static String securityKeyMethodNoEnc(TreeMap<String, String> tMap, String requestKey) {
-        return getSecurityKeys(tMap, false,requestKey);
+        return getSecurityKeys(tMap, false, requestKey);
     }
 
     /**
@@ -112,6 +120,31 @@ public class SignUtils {
         }
         parmas = DataFormatUtil.addText(new StringBuilder(), parmas, "sign", "=", md5);
         return parmas;
+    }
+
+
+    //检查签名
+    public static boolean getSignInfo(Context context, int hashCode) {
+        boolean checkright = false;
+        try {
+            PackageInfo packageInfo = context.getApplicationContext().getPackageManager().getPackageInfo(
+                    context.getPackageName(), PackageManager.GET_SIGNATURES);
+            Signature[] signs = packageInfo.signatures;
+            Signature sign = signs[0];
+            int code = sign.hashCode();
+
+            Log.i("hashcode", "*********************  hashCode =" + code + "  **************************");
+            //对比MD5值和hashcode是否和自己原来的MD5相同
+            if (code == hashCode) {
+                checkright = true;
+            }
+
+
+            //parseSignature(sign.toByteArray());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return checkright;
     }
 
 }

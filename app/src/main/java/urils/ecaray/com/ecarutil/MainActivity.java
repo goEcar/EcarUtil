@@ -10,13 +10,14 @@ import com.orhanobut.logger.Logger;
 import rxbus.ecaray.com.rxbuslib.rxbus.RxBus;
 import rxbus.ecaray.com.rxbuslib.rxbus.RxBusReact;
 import urils.ecaray.com.ecarutils.Utils.NetUtils;
-import urils.ecaray.com.ecarutils.Utils.TagUtil;
+import urils.ecaray.com.ecarutils.Utils.SignUtils;
 import urils.ecaray.com.ecarutils.Utils.ToastUtils;
 import urils.ecaray.com.ecarutils.Utils.receive.NetConnectReceive;
 
 public class MainActivity extends AppCompatActivity {
 
-    boolean IS_DEBUG =true;
+    boolean IS_DEBUG = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,20 +25,30 @@ public class MainActivity extends AppCompatActivity {
         initLoger();
 
         RxBus.getDefault().register(this);
-        NetUtils.init(RxBus.getDefault(),this );
+        NetUtils.init(RxBus.getDefault(), this);
+
+        //检查签名  防止第二次打包
+        if (!SignUtils.getSignInfo(this, -916382879)) {
+            System.exit(0);
+        }
+        //判断代理-防止截包
+        Toast.makeText(this,"是否是代理"+NetUtils.isWifiProxy(this),Toast.LENGTH_SHORT).show();
+
     }
 
-    @RxBusReact(clazz = Boolean.class,tag = NetConnectReceive.Tags.NET_CONNECT)
-    public void showNetState(boolean isConnected){
+    @RxBusReact(clazz = Boolean.class, tag = NetConnectReceive.Tags.NET_CONNECT)
+    public void showNetState(boolean isConnected) {
         if (isConnected) {
-                Toast.makeText(this, "网络已连接  wifi"+NetUtils.isWifiConnected(this) +"移动网络"+NetUtils.isMobileConnected(this), Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "网络已连接  wifi" + NetUtils.isWifiConnected(this) + "移动网络" + NetUtils.isMobileConnected(this), Toast.LENGTH_LONG).show();
         } else {
-                Toast.makeText(this, "网络已断开", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "网络已断开", Toast.LENGTH_LONG).show();
         }
     }
+
     /**
      * 方法描述： 初始化方法
-     *<p>
+     * <p>
+     *
      * @param
      * @return
      */
