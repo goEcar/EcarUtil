@@ -34,6 +34,9 @@ public class ContlorKeyboard {
     public boolean isNeedContlor=true; //是否需要调整
 
 
+    public ContlorKeyboard() {
+
+    }
     public ContlorKeyboard(boolean isNeedContlor) {
         this.isNeedContlor = isNeedContlor;
     }
