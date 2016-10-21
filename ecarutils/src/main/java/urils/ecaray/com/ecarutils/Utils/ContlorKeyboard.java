@@ -31,9 +31,12 @@ public class ContlorKeyboard {
     private int AREA_HEIGHT = 100;//遮盖的高度
 
     public boolean isVisibility; //是否上移
-    public boolean isNeedContlor; //是否需要调整
+    public boolean isNeedContlor=true; //是否需要调整
 
 
+    public ContlorKeyboard(boolean isNeedContlor) {
+        this.isNeedContlor = isNeedContlor;
+    }
 
     public ContlorKeyboard setAREA_HEIGHT(int AREA_HEIGHT) {
         this.AREA_HEIGHT = AREA_HEIGHT;

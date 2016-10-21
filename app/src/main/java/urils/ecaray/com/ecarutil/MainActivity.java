@@ -2,6 +2,7 @@ package urils.ecaray.com.ecarutil;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.orhanobut.logger.LogLevel;
@@ -33,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         }
         //判断代理-防止截包
         Toast.makeText(this,"是否是代理"+NetUtils.isWifiProxy(this),Toast.LENGTH_SHORT).show();
+
+        ((ListView)findViewById(R.id.list)).setEmptyView(findViewById(R.id.image));
 
     }
 
