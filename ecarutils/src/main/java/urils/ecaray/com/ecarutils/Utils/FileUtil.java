@@ -1,5 +1,6 @@
 package urils.ecaray.com.ecarutils.Utils;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -9,6 +10,8 @@ import android.graphics.Rect;
 import android.graphics.YuvImage;
 import android.hardware.Camera;
 import android.os.Environment;
+import android.os.storage.StorageManager;
+import android.text.TextUtils;
 import android.util.Log;
 
 import java.io.BufferedReader;
@@ -23,6 +26,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.zip.CRC32;
 import java.util.zip.CheckedInputStream;
 /**
@@ -509,37 +514,6 @@ public class FileUtil {
         return crc;
     }
 
-    //二进制转文件
-    //fileName文件的全路径  by：二进制数据
-    public static File castByte2File(String fileName, byte[] by) {
-        {
-            FileOutputStream fileout = null;
-            File file = new File(fileName);
-            if (file.exists()) {
-                file.delete();
-            }
-            try {
-                fileout = new FileOutputStream(file);
-                fileout.write(by, 0, by.length);
-
-            } catch (FileNotFoundException e) {
-// TODO Auto-generated catch block
-                e.printStackTrace();
-            } catch (IOException e) {
-// TODO Auto-generated catch block
-                e.printStackTrace();
-            } finally {
-                try {
-                    fileout.close();
-                } catch (IOException e) {
-// TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-            }
-
-            return file;
-        }
-    }
 
 
     /**
@@ -678,5 +652,92 @@ public class FileUtil {
         } catch (Exception e) {
         }
         return bitmap;
+    }
+
+    //二进制转文件
+    //fileName文件的全路径  by：二进制数据
+    public static File castByte2File(String fileName, byte[] by) {
+        {
+            FileOutputStream fileout = null;
+            File file = new File(fileName);
+            if (file.exists()) {
+                file.delete();
+            }
+            try {
+                fileout = new FileOutputStream(file);
+                fileout.write(by, 0, by.length);
+
+            } catch (FileNotFoundException e) {
+// TODO Auto-generated catch block
+                e.printStackTrace();
+            } catch (IOException e) {
+// TODO Auto-generated catch block
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (fileout != null)
+                        fileout.close();
+                } catch (IOException e) {
+// TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+
+            return file;
+        }
+    }
+
+    /****************************************
+     * 方法描述：获取可用的sd卡
+     *
+     * @param (sd卡不可用时返回cache路径)
+     * @return
+     ****************************************/
+    public static String getSdPatch(Activity activity) {
+        if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+            return Environment.getExternalStorageDirectory().getPath().toString();
+        } else {
+            String patch=null;
+            if (TextUtils.isEmpty(patch = getCanUsePatch(activity))) {
+                return activity.getCacheDir().getAbsolutePath();
+            } else{
+                return patch;
+            }
+        }
+
+    }
+
+     //获取当前可用的sd卡路径
+    private static String getCanUsePatch(Activity activity) {
+        StorageManager mStorageManager = (StorageManager) activity
+                .getSystemService(Activity.STORAGE_SERVICE);
+        Method method = null;
+        try {
+            method = mStorageManager.getClass()
+                    .getMethod("getVolumePaths");
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+
+        String[] paths = null;
+        try {
+            paths = (String[]) method.invoke(mStorageManager);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
+        if (paths == null || paths.length == 0) {
+            return "";
+        } else {
+            for (int i = 0; i < paths.length; i++) {
+                if (new File(paths[i]).canRead()) {
+                    return paths[i];
+                }
+            }
+        }
+        return "";
     }
 }
