@@ -37,6 +37,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
+
 /**
  * 类描述：日常工具类
  *<p>
@@ -657,6 +658,7 @@ public class Util {
         //字符类型转换
         String leftMemSize = Formatter.formatFileSize(context, memSize);
     }
+
 
 
 }
