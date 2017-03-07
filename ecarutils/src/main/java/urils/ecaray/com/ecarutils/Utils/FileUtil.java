@@ -695,7 +695,7 @@ public class FileUtil {
      ****************************************/
     public static String getSdPatch(Activity activity) {
         if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-            return Environment.getExternalStorageDirectory().getPath().toString();
+            return Environment.getExternalStorageDirectory().getAbsolutePath().toString();
         } else {
             String patch=null;
             if (TextUtils.isEmpty(patch = getCanUsePatch(activity))) {
