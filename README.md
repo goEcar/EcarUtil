@@ -1,3 +1,10 @@
+#KeyStore加密
+```
+//加密
+EncryUtils.getInstance().encryptString(String 要加密的字符串,Context  context)
+//解密
+EncryUtils.getInstance().decryptString(String 要解密的字符串,Context  context)
+```
 #方法列表
 ```
 为方便查找，已进行大致归类，其目录如下所示：
