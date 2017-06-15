@@ -1,8 +1,14 @@
 package urils.ecaray.com.ecarutil;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.orhanobut.logger.LogLevel;
@@ -14,6 +20,7 @@ import urils.ecaray.com.ecarutils.Utils.NetUtils;
 import urils.ecaray.com.ecarutils.Utils.SignUtils;
 import urils.ecaray.com.ecarutils.Utils.ToastUtils;
 import urils.ecaray.com.ecarutils.Utils.receive.NetConnectReceive;
+import urils.ecaray.com.ecarutils.Utils.security.EncryUtils;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,10 +40,38 @@ public class MainActivity extends AppCompatActivity {
             System.exit(0);
         }
         //判断代理-防止截包
-        Toast.makeText(this,"是否是代理"+NetUtils.isWifiProxy(this),Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "是否是代理" + NetUtils.isWifiProxy(this), Toast.LENGTH_SHORT).show();
 
-        ((ListView)findViewById(R.id.list)).setEmptyView(findViewById(R.id.image));
+        //基于Keystore的加密解密
+        final TextView after_encry_tv = (TextView) findViewById(R.id.after_encry_tv);
+        final TextView after_decrypt_tv = (TextView) findViewById(R.id.after_decrypt_tv);
+        final EditText need_deal_word_edit = (EditText) findViewById(R.id.need_deal_word_edit);
 
+
+        final Button encryptBtn = (Button) findViewById(R.id.encryptBtn);
+        final Button decryptBtn = (Button) findViewById(R.id.decryptBtn);
+
+        //加密
+        encryptBtn.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
+            @Override
+            public void onClick(View v) {
+                String need_deal_word_str = need_deal_word_edit.getText().toString().trim();
+                String after_encry_str = EncryUtils.getInstance().encryptString(need_deal_word_str, MainActivity.this);
+                after_encry_tv.setText(after_encry_str);
+            }
+        });
+        //解密
+        decryptBtn.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
+            @Override
+            public void onClick(View v) {
+                String before_decrypt_str = after_encry_tv.getText().toString();
+                String after_decrypt_str = EncryUtils.getInstance().decryptString(before_decrypt_str, MainActivity.this);
+                after_decrypt_tv.setText(after_decrypt_str);
+            }
+
+        });
     }
 
     @RxBusReact(clazz = Boolean.class, tag = NetConnectReceive.Tags.NET_CONNECT)
