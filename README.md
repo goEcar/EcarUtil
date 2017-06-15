@@ -1,9 +1,9 @@
 #KeyStore加密
 ```
 //加密
-EncryUtils.getInstance().encryptString(String 要加密的字符串,Context  context)
+KeyStoreUtils.getInstance().encryptString(String 要加密的字符串,Context  context)
 //解密
-EncryUtils.getInstance().decryptString(String 要解密的字符串,Context  context)
+KeyStoreUtils.getInstance().decryptString(String 要解密的字符串,Context  context)
 ```
 #方法列表
 ```
