@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,7 +19,7 @@ import urils.ecaray.com.ecarutils.Utils.NetUtils;
 import urils.ecaray.com.ecarutils.Utils.SignUtils;
 import urils.ecaray.com.ecarutils.Utils.ToastUtils;
 import urils.ecaray.com.ecarutils.Utils.receive.NetConnectReceive;
-import urils.ecaray.com.ecarutils.Utils.security.EncryUtils;
+import urils.ecaray.com.ecarutils.Utils.security.KeyStoreUtils;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String need_deal_word_str = need_deal_word_edit.getText().toString().trim();
-                String after_encry_str = EncryUtils.getInstance().encryptString(need_deal_word_str, MainActivity.this);
+                String after_encry_str = KeyStoreUtils.getInstance().encryptString(need_deal_word_str, MainActivity.this);
                 after_encry_tv.setText(after_encry_str);
             }
         });
@@ -67,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String before_decrypt_str = after_encry_tv.getText().toString();
-                String after_decrypt_str = EncryUtils.getInstance().decryptString(before_decrypt_str, MainActivity.this);
+                String after_decrypt_str = KeyStoreUtils.getInstance().decryptString(before_decrypt_str, MainActivity.this);
                 after_decrypt_tv.setText(after_decrypt_str);
             }
 

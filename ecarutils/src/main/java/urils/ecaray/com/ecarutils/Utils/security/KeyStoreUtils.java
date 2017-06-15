@@ -1,6 +1,5 @@
 package urils.ecaray.com.ecarutils.Utils.security;
 
-import android.app.Application;
 import android.content.Context;
 import android.os.Build;
 import android.security.KeyPairGeneratorSpec;
@@ -26,20 +25,20 @@ import javax.security.auth.x500.X500Principal;
  * 使用ksyStore加密工具类
  */
 
-public class EncryUtils {
-    static EncryUtils encryUtilsInstance;
+public class KeyStoreUtils {
+    static KeyStoreUtils encryUtilsInstance;
     KeyStore keyStore;
 
-    public static EncryUtils getInstance() {
-        synchronized (EncryUtils.class) {
+    public static KeyStoreUtils getInstance() {
+        synchronized (KeyStoreUtils.class) {
             if (null == encryUtilsInstance) {
-                encryUtilsInstance = new EncryUtils();
+                encryUtilsInstance = new KeyStoreUtils();
             }
         }
         return encryUtilsInstance;
     }
 
-    public EncryUtils() {
+    public KeyStoreUtils() {
 //        initKeyStore();
     }
 
