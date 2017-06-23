@@ -126,7 +126,8 @@ public class KeyStoreUtils {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            return Base64.encodeToString(vals, Base64.DEFAULT);
+            String str = Base64.encodeToString(vals, Base64.DEFAULT);
+            return str==null?"":str;
         }
         return "";
     }
